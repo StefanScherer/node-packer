@@ -4,3 +4,8 @@
 [submodule "tests/node-compiler-ram"]
 	path = tests/node-compiler-ram
 	url = https://github.com/pmq20/node-compiler-ram.git
+[submodule "node"]
+	path = node
+	url = https://github.com/nodejs/node
+	shallow = true
+	branch = v9.3.0
