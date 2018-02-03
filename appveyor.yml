@@ -9,7 +9,9 @@ environment:
 
 build_script:
 - ps: |
-    git submodule update --init --recursive
+    mv node nodexx
+
+    git clone --branch v8.9.4 https://github.com/nodejs/node
 
     choco install -y 7zip.commandline
 
