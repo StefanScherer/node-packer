@@ -8,4 +8,4 @@
 	path = node
 	url = https://github.com/nodejs/node
 	shallow = true
-	branch = v9.3.0
+	branch = v8.9.4
