@@ -27,7 +27,7 @@ build_script:
 
     [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\projects\node-compiler\sqfs43-win32.zip", "C:\projects\node-compiler\usr\bin")
 
-    7z x -o C:\projects\node-compiler\usr\bin "C:\projects\node-compiler\node.zip
+    7z x -o C:\projects\node-compiler\usr\bin C:\projects\node-compiler\node.zip
 
 test_script:
 - cmd: |
