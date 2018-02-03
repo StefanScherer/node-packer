@@ -2,7 +2,7 @@ version: '{build}'
 
 environment:
   NODEC_TESTS_TMPDIR: C:\projects\node-compiler\nodec_tests_tmpdir
-  NODEC_NODE: 8.9.4
+  NODEC_NODE: 8.3.0
   matrix:
     - TEST_SCRIPT: coffeescript
     - TEST_SCRIPT: microtime
@@ -11,7 +11,7 @@ build_script:
 - ps: |
     mv node nodexx
 
-    git clone --branch v8.9.4 https://github.com/nodejs/node
+    git clone --branch v8.3.0 https://github.com/nodejs/node
 
     choco install -y 7zip.commandline
 
