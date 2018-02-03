@@ -11,6 +11,8 @@ build_script:
 - ps: |
     $ErrorActionPreference="Stop"
 
+    choco install -y 7zip.commandline
+
     mkdir C:\projects\node-compiler\nodec_tests_tmpdir
 
     Start-FileDownload https://github.com/pmq20/rubyinstaller/files/689117/rb240-win32.zip -FileName C:\projects\node-compiler\ruby240_win32.zip
@@ -25,7 +27,7 @@ build_script:
 
     [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\projects\node-compiler\sqfs43-win32.zip", "C:\projects\node-compiler\usr\bin")
 
-    [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\projects\node-compiler\node.zip", "C:\projects\node-compiler\usr\bin")
+    7z x -o C:\projects\node-compiler\usr\bin "C:\projects\node-compiler\node.zip
 
 test_script:
 - cmd: |
