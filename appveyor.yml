@@ -9,8 +9,6 @@ environment:
 
 build_script:
 - ps: |
-    $ErrorActionPreference="Stop"
-
     choco install -y 7zip.commandline
 
     mkdir C:\projects\node-compiler\nodec_tests_tmpdir
@@ -27,7 +25,7 @@ build_script:
 
     [System.IO.Compression.ZipFile]::ExtractToDirectory("C:\projects\node-compiler\sqfs43-win32.zip", "C:\projects\node-compiler\usr\bin")
 
-    7z x -o C:\projects\node-compiler\usr\bin C:\projects\node-compiler\node.zip
+    7z.exe x -o C:\projects\node-compiler\usr\bin C:\projects\node-compiler\node.zip
 
 test_script:
 - cmd: |
