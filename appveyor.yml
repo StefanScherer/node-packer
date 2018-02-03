@@ -9,6 +9,8 @@ environment:
 
 build_script:
 - ps: |
+    git submodule update --init --recursive
+
     choco install -y 7zip.commandline
 
     mkdir C:\projects\node-compiler\nodec_tests_tmpdir
